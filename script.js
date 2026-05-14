@@ -23,28 +23,28 @@ async function loadWorksFromServer() {
       id: 2,
       title: "Fashion Editorial",
       category: "fashion",
-      imageUrl: "images/fashion.jpg", // ← Твоя локальная картинка
+      imageUrl: "./images/fashion.jpg", // ← Твоя локальная картинка
       description: "Editorial shoot for fashion brand",
     },
     {
       id: 3,
       title: "Wedding Story",
       category: "event",
-      imageUrl: "images/wedding.jpg", // ← Твоя локальная картинка
+      imageUrl: "./images/wedding.jpg", // ← Твоя локальная картинка
       description: "Wedding photography in Florence",
     },
     {
       id: 4,
       title: "Business Headshots",
       category: "business",
-      imageUrl: "images/buisness.jpg", // ← Твоя локальная картинка
+      imageUrl: "./images/buisness.jpg", // ← Твоя локальная картинка
       description: "Corporate photography for professionals",
     },
     {
       id: 5,
       title: "Interior Design",
       category: "interior",
-      imageUrl: "images/interior.jpg", // ← Твоя локальная картинка
+      imageUrl: "./images/interior.jpg", // ← Твоя локальная картинка
       description: "Architectural photography for real estate",
     },
   ];
