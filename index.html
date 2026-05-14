@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giselle - On-Location Photographer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav container">
+        <!-- Navigation Menu - LEFT -->
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#contact" class="nav-link">Contacts</a></li>
+        </ul>
+
+        <!-- Logo - CENTER -->
+        <div class="logo">
+          <h1>GISELLE</h1>
+          <p>photographer</p>
+        </div>
+
+        <!-- Contacts - RIGHT -->
+        <div class="header-contacts">
+          <a href="tel:+700000000" class="phone">+7 (000) 00-00</a>
+          <a href="#contact" class="btn-contact">Contact me</a>
+        </div>
+
+        <!-- Burger Menu Button (mobile only) -->
+        <button class="burger-menu" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="hero-image">
+          <img src="images/photographer.jpg" alt="Portrait" />
+        </div>
+
+        <div class="hero-info">
+          <h2>ON-LOCATION PHOTOGRAPHER</h2>
+          <p>
+            Bringing professional light and creative vision to your doorstep. I
+            specialize in mobile photography services that adapt to your
+            schedule and your space. Whether it's a portrait, event, or product
+            shoot, I'll come to you to capture the moment exactly as you
+            envision it.
+          </p>
+
+          <ul class="features">
+            <li>
+              <i class="fas fa-map-marker-alt"></i> Assistance with location
+            </li>
+            <li><i class="fas fa-user"></i> Posing assistance</li>
+            <li><i class="fas fa-video"></i> Professional video shooting</li>
+            <li><i class="fas fa-images"></i> Providing the original photos</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio section">
+      <div class="container">
+        <h2 class="section-title">Portfolio</h2>
+        <p class="section-description">
+          I'm Giselle, and I believe every location tells a story. As an
+          on-location photographer, I don't just take photos; I capture the
+          essence of a moment in its natural element. I thrive on the
+          spontaneity of the 'real world'—the shifting light, the unique
+          textures of a city street, or the quiet comfort of your own space. I
+          travel to my clients to ensure the results feel authentic, personal,
+          and timeless. Let's find the perfect backdrop for your story and
+          create something beautiful together.
+        </p>
+
+        <div class="portfolio-wrapper">
+          <div class="portfolio-nav left" onclick="scrollPortfolio(-1)">
+            <div class="nav-arrow">
+              <i class="fas fa-chevron-left"></i>
+            </div>
+          </div>
+
+          <div class="portfolio-grid" id="portfolioGrid">
+            <div
+              class="portfolio-item tall"
+              data-type="portfolio"
+              data-index="0"
+            >
+              <img src="images/portrait.jpg" alt="Portrait" />
+            </div>
+            <div
+              class="portfolio-item wide"
+              data-type="portfolio"
+              data-index="1"
+            >
+              <img src="images/fashion.jpg" alt="Fashion" />
+            </div>
+            <div class="portfolio-item" data-type="portfolio" data-index="2">
+              <img src="images/portrait2.jpg" alt="Portrait" />
+            </div>
+            <div class="portfolio-item" data-type="portfolio" data-index="3">
+              <img src="images/wedding.jpg" alt="Event" />
+            </div>
+          </div>
+
+          <div class="portfolio-nav right" onclick="scrollPortfolio(1)">
+            <div class="nav-arrow">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services section">
+      <div class="container">
+        <h2 class="section-title">Services</h2>
+
+        <!-- Filter Buttons -->
+        <div class="services-filter">
+          <button class="filter-btn active" onclick="filterServices('all')">
+            All
+          </button>
+          <button class="filter-btn" onclick="filterServices('photo')">
+            Photography
+          </button>
+          <button class="filter-btn" onclick="filterServices('video')">
+            Video
+          </button>
+        </div>
+
+        <div class="services-grid" id="servicesGrid">
+          <div
+            class="service-card"
+            data-type="services"
+            data-index="0"
+            data-category="photo"
+          >
+            <img src="images/portrait3.jpg" alt="Portrait" />
+            <h3>Portrait</h3>
+            <button
+              class="btn-show-more"
+              onclick="event.stopPropagation(); openGallery('services', 0)"
+            >
+              Show More
+            </button>
+          </div>
+
+          <div
+            class="service-card"
+            data-type="services"
+            data-index="1"
+            data-category="photo"
+          >
+            <img src="images/wedding2.jpg" alt="Event" />
+            <h3>Event photography</h3>
+            <button
+              class="btn-show-more"
+              onclick="event.stopPropagation(); openGallery('services', 1)"
+            >
+              Show More
+            </button>
+          </div>
+
+          <div
+            class="service-card"
+            data-type="services"
+            data-index="2"
+            data-category="photo"
+          >
+            <img src="images/buisness.jpg" alt="Business" />
+            <h3>Business photography</h3>
+            <button
+              class="btn-show-more"
+              onclick="event.stopPropagation(); openGallery('services', 2)"
+            >
+              Show More
+            </button>
+          </div>
+
+          <div
+            class="service-card"
+            data-type="services"
+            data-index="3"
+            data-category="photo"
+          >
+            <img src="images/interior.jpg" alt="Interior" />
+            <h3>Interior and architectural photography</h3>
+            <button
+              class="btn-show-more"
+              onclick="event.stopPropagation(); openGallery('services', 3)"
+            >
+              Show More
+            </button>
+          </div>
+
+          <div
+            class="service-card"
+            data-type="services"
+            data-index="4"
+            data-category="video"
+          >
+            <img src="images/video-shooting.jpg" alt="Video" />
+            <h3>Content video shooting</h3>
+            <button
+              class="btn-show-more"
+              onclick="event.stopPropagation(); openGallery('services', 4)"
+            >
+              Show More
+            </button>
+          </div>
+
+          <div
+            class="service-card"
+            data-type="services"
+            data-index="5"
+            data-category="photo video"
+          >
+            <img src="images/special.jpg" alt="Specialized" />
+            <h3>Specialized shooting</h3>
+            <button
+              class="btn-show-more"
+              onclick="event.stopPropagation(); openGallery('services', 5)"
+            >
+              Show More
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNIFIED GALLERY MODAL -->
+    <div class="modal" id="galleryModal">
+      <button class="modal-close" onclick="closeModal()">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <div class="modal-content">
+        <div class="modal-left">
+          <div class="modal-image-wrapper">
+            <img src="" alt="" id="modalImage" />
+          </div>
+        </div>
+
+        <div class="modal-right">
+          <div class="modal-info">
+            <h3 id="modalTitle">Title</h3>
+            <p class="category" id="modalCategory">Category</p>
+            <div id="modalDetails"></div>
+            <div id="modalText" class="modal-text"></div>
+
+            <!-- Обёртка для цены и кнопки -->
+            <div class="modal-footer-content">
+              <p class="modal-price" id="modalPrice">Price</p>
+              <button
+                class="btn-show-more-modal"
+                id="modalShowMoreBtn"
+                onclick="showMoreAction()"
+              >
+                Show More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="modal-arrow prev" onclick="navigateGallery(-1)">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="modal-arrow next" onclick="navigateGallery(1)">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <section id="contact" class="contact section">
+      <div class="container">
+        <div class="contact-content">
+          <div class="contact-form">
+            <h3>Contact me</h3>
+            <p>Enjoyed my work? Leave a request and I'll contact you</p>
+
+            <form id="contactForm">
+              <input type="text" placeholder="Enter your name" required />
+              <input type="tel" placeholder="Enter your number" required />
+              <button type="submit" class="btn-submit">Send request</button>
+            </form>
+          </div>
+
+          <div class="contact-info">
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Milan</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <span>+7 (000) 00-00</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <span>Email@mail.com</span>
+            </div>
+
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-telegram"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>Copyright©2026 Giselle Photography. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
