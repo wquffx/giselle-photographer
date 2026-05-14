@@ -16,7 +16,7 @@ async function loadWorksFromServer() {
       id: 1,
       title: "Elegant Portrait",
       category: "portrait",
-      imageUrl: "images/portrait.jpg", // ← Твоя локальная картинка
+      imageUrl: "./images/portrait.jpg", // ← Твоя локальная картинка
       description: "Individual portrait session in Milan",
     },
     {
